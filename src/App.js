@@ -1,5 +1,10 @@
 import './styles/global.scss';
+import {Banner} from './components/Banner';
 
 export function App() {
-    return <h1>Hello, React</h1>
+    return (
+    <>
+        <Banner />
+    </>
+    )
 }
