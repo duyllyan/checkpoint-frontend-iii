@@ -30,7 +30,7 @@ module.exports = {
                 use: 'babel-loader',
             },
             {
-                test: /\.scss?$/,
+                test: /\.(scss|css)$/i,
                 exclude: /node_modules/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
