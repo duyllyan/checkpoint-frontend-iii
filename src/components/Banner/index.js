@@ -17,7 +17,7 @@ export function Banner () {
                             <image xlinkHref={profilePic}/>
                         </g>
                     </svg>
-                    <p id="code">></p>
+                    <p id="code">{'>'}</p>
                 </div>
             </div>
             <div className="banner-item" id="content">
