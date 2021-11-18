@@ -1,0 +1,105 @@
+@import "../../styles/global.scss";
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+
+    .banner-item {
+        flex: 1;
+    }
+
+
+    #profile-container {
+        position: relative;
+        margin-top: -7vh;
+        width: 100%;
+        max-width: 600px;
+
+        #image-bg {
+            width: 90%;
+            z-index: 0;
+            fill: $primary-color;
+        }
+
+        #code {
+            position: absolute;
+            top: 35vw;
+            right: 0;
+            color: $secondary-color;
+            font-size: 70vw;
+            font-weight: bold;
+            z-index: 1;
+        }
+    }
+
+    #content {
+        margin: 8vh 20px 0 20px;
+
+        .greetings {
+            line-height: $h1-font-size *1.1;
+            margin-top: 00.5rem;
+        }
+
+        .title {
+            line-height: $h2-font-size * 1.1 ;
+            margin-top: 0.5rem;
+        }
+
+        .description {
+            margin-top: 0.8rem;
+            text-align: justify;
+        }
+
+        #buttons {
+            margin-top: 5vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%;
+
+            #contact-me {
+                width: 65vw;
+                justify-content: center;
+            }
+
+            .btn-social {
+                color: $secondary-color;
+                
+                svg {
+                    width: 10vw;
+                    height: 10vw;
+                }
+            }
+        }
+
+        #arrow {
+            margin-top: 2vh;
+            max-width: 100vw;
+            display: flex;
+            justify-content: center;
+            
+            svg {
+                width: 5vh;
+                height: 5vh;
+                color: $secondary-color;
+            }
+            animation: floating 2s infinite;
+        }
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}

@@ -1,6 +1,5 @@
 import profilePic from '../../assets/profile2.png';
-import btnSend from '../../assets/btnSend.svg';
-import './style.scss'
+import './style2.scss'
 import * as Unicons from '@iconscout/react-unicons';
 
 export function Banner () {
@@ -21,20 +20,13 @@ export function Banner () {
                 </div>
             </div>
             <div className="banner-item" id="content">
-                <div id="greetings">
-                    <h1>Olá,</h1>
-                    <h1>Me chamo Duyllyan</h1>
-                </div>
-                <div id="title">
-                    <h2>Desenvolvedor Fullstack</h2>
-                </div>
-                <div id="description">
-                    <p>Cursando desenvolvimento web, em busca de recolocação no mercado de trabalho.</p>
-                </div>
+                <h1 className="greetings">Olá, <br></br> Me chamo Duyllyan</h1>
+                <h2 className="title">Desenvolvedor Fullstack</h2>
+                <p className="description">Cursando desenvolvimento web, em busca de recolocação no mercado de trabalho.</p>
                 <div id="buttons">
-                    <a href="#" id="contact-me" alt="Contact">
+                    <a href="#" className="button"id="contact-me" alt="Contact">
                         Entre em contato
-                        <img src={btnSend}/>
+                        <Unicons.UilMessage/>
                     </a>
                     <a href="https://www.linkedin.com/in/duyllyan/" className="btn-social"id="linkedin" alt="Linkedin" target="_blank">
                         <Unicons.UilLinkedinAlt />
@@ -43,9 +35,9 @@ export function Banner () {
                         <Unicons.UilGithubAlt />
                     </a>
                 </div>
-            </div>
-            <div id="arrow">
+                <div id="arrow">
                 <Unicons.UilAngleDown />
+            </div>
             </div>
         </section>
     )
