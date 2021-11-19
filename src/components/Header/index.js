@@ -23,7 +23,7 @@ export function Header() {
         <nav className={`header-nav content ${clicked ? "clicked" : ""}`}>
             <ul>
                 <li className="nav-item"><a href="#">Contato</a></li>
-                <li className="nav-item"><a href="#">Portifólio</a></li>
+                <li className="nav-item"><a href="#portifolio">Portifólio</a></li>
                 <li className="nav-item"><a href="#">Skills</a></li>
             </ul>
         </nav>

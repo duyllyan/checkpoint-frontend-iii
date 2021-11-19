@@ -1,0 +1,43 @@
+@import "../../styles/global.scss";
+
+.portifolio-item {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: $border-radius;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content:space-between;
+    min-width: 85vw;
+    margin: 2rem 7.5vw;
+    padding: $m_1_5;
+    min-height: 70vh;
+
+    .title {
+        margin: .5rem 0;
+        color: $secondary-color;
+    }
+
+    .description {
+        text-align: justify;
+    }
+
+    .button {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button .link {
+        color: $white;
+    }
+
+    .img img {
+        width: 100%;
+        max-height: 23vh;
+        object-fit: contain;
+    }
+
+    
+
+}

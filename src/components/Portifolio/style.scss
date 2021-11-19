@@ -1,0 +1,21 @@
+@import "../../styles/global.scss";
+
+.portifolio {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .titulo {
+        text-align: center;
+    }
+
+    .portifolio-container {
+        overflow-x: scroll;
+        display: flex;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
