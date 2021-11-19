@@ -22,9 +22,9 @@ export function Header() {
         <h2 className="indice content">Contato</h2>
         <nav className={`header-nav content ${clicked ? "clicked" : ""}`}>
             <ul>
-                <li className="nav-item"><a href="#">Contato</a></li>
-                <li className="nav-item"><a href="#portifolio">Portifólio</a></li>
-                <li className="nav-item"><a href="#">Skills</a></li>
+                <li onClick={handleClick} className="nav-item"><a href="#">Contato</a></li>
+                <li onClick={handleClick} className="nav-item"><a href="#portifolio">Portifólio</a></li>
+                {/* <li onClick={handleClick} className="nav-item"><a href="#">Skills</a></li> */}
             </ul>
         </nav>
         <UilAngleDown onClick={handleClick} className={`menu content ${clicked ? "clicked" : ""}`}/>

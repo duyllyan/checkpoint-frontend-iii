@@ -94,6 +94,90 @@
     }
 }
 
+@media screen and (min-width: $desktop) {
+    .banner {
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: calc(100vh - $header-height);
+        margin-top: $header-height;
+
+        .banner-item{
+            flex: 0;
+        }
+        
+        #profile-pic {
+            margin-right: 5vw;
+            
+            #profile-container {
+                width: 30vw;
+                max-width: 30vw;
+
+                #image-bg {
+                    
+                }
+
+                #code {
+                    top: 0;
+                    left: 18vw;
+                    font-size: 30vw;
+                }
+            }
+        }
+
+        #content {
+            margin: 0;
+
+            &.banner-item {
+                flex: 0;
+            }
+            
+    
+            .greetings {
+                line-height: $h1-font-size *1.1;
+                margin-top: 00.5rem;
+            }
+    
+            .title {
+                line-height: $h2-font-size * 1.1 ;
+                margin-top: 0.5rem;
+            }
+    
+            .description {
+                margin-top: 0.8rem;
+                text-align: justify;
+            }
+    
+            #buttons {
+                justify-content: start;
+                max-height: 7vh;
+    
+                #contact-me {
+                    width: 20vw;
+                    height: 7vh;
+                    justify-content: center;
+                }
+    
+                .btn-social {
+                    color: $secondary-color;
+                    
+                    svg {
+                        height: 7vh;
+                        width: 5vw;
+                    }
+                }
+            }
+    
+            #arrow {
+                display: none;
+            }
+            
+        }
+    }    
+}
+
 @keyframes floating {
     0% {
         transform: translateY(0);

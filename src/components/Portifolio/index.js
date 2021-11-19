@@ -1,5 +1,5 @@
 import './style.scss'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useLayoutEffect} from 'react'
 import { PortifolioItem } from '../PortifolioItem'
 
 const repository = {
@@ -12,6 +12,7 @@ const repository = {
 export function Portifolio() {
 
     const [repositories, setRepositories] = useState([])
+    const [scrollPosition, setScrollPosition] = useState(0)
 
     useEffect(() => {
         fetch('https://api.github.com/users/duyllyan/repos')
@@ -23,9 +24,11 @@ export function Portifolio() {
         <section className="portifolio" id="portifolio">
             <h1 className="titulo">Portifólio</h1>
             <div className="portifolio-container">
+                {/* <p className="arrow left">{'<'}</p> */}
                 {repositories.map(repository => {
                     return <PortifolioItem repository={repository} />
                 })}
+                {/* <p className="arrow right">{'>'}</p> */}
             </div>
         </section>
     )

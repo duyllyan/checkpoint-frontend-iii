@@ -4,7 +4,6 @@
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 
     .titulo {
         text-align: center;
@@ -17,5 +16,76 @@
         &::-webkit-scrollbar {
             display: none;
         }
+        
+        .arrow {
+            display: block;
+            font-size: 6rem;
+            position: absolute;
+            color: $secondary-color;
+            align-self: center;
+
+            &.left {
+                left: 0;
+                animation: floating-left 2s infinite;
+
+                &.hidden {
+                    opacity: 0;
+                }
+            }
+
+            &.right {
+                right: 0;
+                animation: floating-right 2s infinite;
+
+                &.hidden {
+                    opacity: 0;
+                }
+            }
+            
+        }
     }
+}
+
+
+@media screen and (min-width: $desktop) {
+    .portifolio {
+        .titulo {
+            font-size: $big-font-size;
+            margin-bottom: 2rem;
+        }
+        .portifolio-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+}
+
+
+@keyframes floating-right {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0.5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes floating-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-0.5rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
 }

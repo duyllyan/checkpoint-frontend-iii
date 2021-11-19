@@ -8,7 +8,7 @@
     height: $header-height;
     background: $white;
     justify-content: space-between;
-    border-bottom: 1px solid $gray1;
+    border-bottom: 1px solid $gray3;
     transform: transition(all 0.3s ease-in-out);
 
     .content {
@@ -95,7 +95,7 @@
 }
 
 .hidden.header {
-    background: rgba(255, 255, 255, 0);
+    background: none;
     border-bottom: none;
 
     .indice {
@@ -104,6 +104,52 @@
     }
 }
 
+
 .clicked.menu {
     transform: rotate(180deg);  
+}
+
+@media screen and (min-width: $desktop) {
+    .header {
+        display: block;
+        position: fixed;
+        top: 0;
+
+        .menu {
+            display: none;
+        }
+
+        &.hidden {
+            opacity: 100%;
+        }
+
+        .content {
+            &.indice, &.menu {
+                display: none;
+            }
+        }
+    
+        .header-nav {
+            display: flex;
+            align-items: flex-end;
+            transform: none;
+            transition: none;
+            opacity: 100%;
+            position: fixed;
+            margin: 0;          
+    
+            ul {
+                flex-direction: row;
+                margin: auto $m_1_5;
+                
+    
+                li {
+                    display: inline-flex;
+                    width: auto;
+                    margin: 0 $m_1_5;
+                    background: none;
+                }
+            }
+        }
+    }  
 }

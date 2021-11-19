@@ -13,7 +13,7 @@
 
     .title {
         margin: .5rem 0;
-        color: $secondary-color;
+        color: $gray2;
     }
 
     .description {
@@ -38,6 +38,15 @@
         object-fit: contain;
     }
 
-    
+}
 
+@media screen and (min-width: $desktop) {
+    .portifolio-item {
+        min-width: 400px;
+        width: 20vw;
+        height: 60vh;
+        min-height: 65vh;
+        margin: $m_1_5;
+    }
+    
 }

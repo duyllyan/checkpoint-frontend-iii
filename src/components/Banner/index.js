@@ -24,7 +24,7 @@ export function Banner () {
                 <h2 className="title">Desenvolvedor Fullstack</h2>
                 <p className="description">Cursando desenvolvimento web, em busca de recolocação no mercado de trabalho.</p>
                 <div id="buttons">
-                    <a href="#" className="button"id="contact-me" alt="Contact">
+                    <a href="https://api.whatsapp.com/qr/O5VPJYMIM4HEB1" className="button"id="contact-me" alt="Contact">
                         Entre em contato
                         <Unicons.UilMessage/>
                     </a>

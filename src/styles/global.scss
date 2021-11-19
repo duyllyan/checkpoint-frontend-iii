@@ -21,6 +21,8 @@ $h3-font-size: 1.1rem;
 $text-font-size: 1rem;
 $small-font-size: 0.8rem;
 
+$desktop: 768px;
+
 //Margens
 $m_1_5: 1.5rem;
 $border-radius: 1rem;
@@ -40,6 +42,7 @@ html, body {
     overflow-x: hidden;
     font-family: $body-font;
     font-size: $text-font-size;
+
 }
 
 .button {
@@ -78,27 +81,4 @@ p {
     color: $gray2;
 }
 
-//Media Queries
-$media_queries : (
-    'mobile': "only screen and (max-width: 667px)",
-    'tablet': "only screen and (min-width: 668px) and (max-width: 1024px)",
-    'desktop': "only screen and (min-width: 1025px)",
-    'landscape': "screen and (orientation: landscape)",
-    'portrait': "screen and (orientation: portrait)"
-);
 
-@mixin for_breakpoint($breakpoints) {
-    $conditions : ();
-    @each $breakpoint in $breakpoints {
-        $conditions : append(
-            $conditions, 
-            #{inspect(map-get($media_queries, $breakpoint))},
-            comma
-        );
-    }
-
-    @media #{conditions} {
-        @content;
-    }
-    
-}
