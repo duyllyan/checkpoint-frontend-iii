@@ -1,5 +1,5 @@
 import profilePic from '../../assets/profile2.png';
-import './style2.scss'
+import './style.scss'
 import * as Unicons from '@iconscout/react-unicons';
 
 export function Banner () {

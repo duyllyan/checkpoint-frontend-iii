@@ -1,0 +1,109 @@
+@import "../../styles/global.scss";
+
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: $header-height;
+    background: $white;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray1;
+    transform: transition(all 0.3s ease-in-out);
+
+    .content {
+        color: $gray1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .indice {
+        margin-left: 1rem;
+        text-decoration: none;
+        font-weight: normal;
+    }
+
+    .menu {
+        margin-right: 1rem;
+        align-self: center;
+    }
+
+    .header-nav {
+        display: flex;
+        position: fixed;
+        margin-top: $header-height;
+        top: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        transform: translateY(-4 * $header-height);
+        transition: transform 200ms ease;
+        opacity: 0;
+        z-index: -1;
+        
+
+        &.clicked {
+            transform: translateY(0);
+            opacity: 100;
+        }
+
+        .dark {
+            background: $gray1;
+            color: $white;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                background: $white;
+                width: 100vw;
+                height: $header-height;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    display: flex;
+                    text-decoration: none;
+                    color: $gray1;
+                    font-size: $text-font-size;
+                }
+            }
+
+            .dark a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.dark, .dark.content, .dark.menu {
+    background: $gray1;
+    color: $white;
+}
+
+.dark.header {
+    border-bottom: 1px solid $gray3 ;
+}
+
+.hidden.header {
+    background: rgba(255, 255, 255, 0);
+    border-bottom: none;
+
+    .indice {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+}
+
+.clicked.menu {
+    transform: rotate(180deg);  
+}
